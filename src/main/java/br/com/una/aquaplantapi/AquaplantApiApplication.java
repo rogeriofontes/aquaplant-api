@@ -41,7 +41,8 @@ public class AquaplantApiApplication implements CommandLineRunner {
 
 		List<Planta> plantaList = plantaRepositorio.findAll();
 		for(Planta p : plantaList){
-			System.out.println(p);
+			System.out.println("Nome Planta:" + p.getNome());
+			System.out.println("Nome Cliente:" + p.getCliente().getNome());
 		}
 
 	}
