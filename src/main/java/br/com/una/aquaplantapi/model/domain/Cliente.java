@@ -41,6 +41,14 @@ public class Cliente {
         this.id = id;
     }
 
+    public String getNomeDaMae() {
+        return nomeDaMae;
+    }
+
+    public void setNomeDaMae(String nomeDaMae) {
+        this.nomeDaMae = nomeDaMae;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,5 +60,12 @@ public class Cliente {
     @Override
     public int hashCode() {
         return Objects.hash(nome, email);
+    }
+
+    public void update(Long id, Cliente cliente) {
+        this.id = id;
+        this.nome = cliente.getNome();
+        this.email = cliente.getEmail();
+        this.nomeDaMae = cliente.getNomeDaMae();
     }
 }
